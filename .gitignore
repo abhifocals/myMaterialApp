@@ -1,1 +1,5 @@
 /.idea
+/.gradle
+/myMaterialApp.iml
+/XYZReader/build
+/XYZReader/XYZReader.iml
