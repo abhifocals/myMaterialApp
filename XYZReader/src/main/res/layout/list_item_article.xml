@@ -13,7 +13,8 @@
         android:layout_height="130dp"
         android:background="@color/photo_placeholder"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/article_title"
