@@ -234,6 +234,9 @@ public class ArticleDetailFragment extends Fragment implements
             }
             String text = mCursor.getString(ArticleLoader.Query.BODY);
 
+            // Removing starting character in The Scarlet Plague
+            text = text.replaceAll("[A-z]\n\n", "");
+
             bodyView.setText(Html.fromHtml(text, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH));
 
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
