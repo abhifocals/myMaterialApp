@@ -29,7 +29,8 @@
         app:layout_constraintStart_toEndOf="@+id/thumbnail"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="This is the title."
-        android:gravity="top"/>
+        android:gravity="top"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/article_subtitle"
