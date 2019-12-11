@@ -3,13 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="325dp"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp">
+    android:layout_marginBottom="16dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
 
     <com.example.xyzreader.ui.DynamicHeightNetworkImageView
         android:id="@+id/thumbnail"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/photo_placeholder"
         android:scaleType="fitXY"
@@ -19,7 +21,7 @@
     <TextView
         android:id="@+id/article_title"
         style="@style/TextAppearance.AppCompat.Subhead"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:gravity="center"
@@ -34,7 +36,7 @@
     <TextView
         android:id="@+id/article_subtitle"
         style="@style/TextAppearance.AppCompat.Body1"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:gravity="center"
