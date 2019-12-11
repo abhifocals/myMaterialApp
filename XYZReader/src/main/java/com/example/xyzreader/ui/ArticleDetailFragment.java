@@ -261,17 +261,26 @@ public class ArticleDetailFragment extends Fragment implements
 
                         }
                     });
-            mPhotoView.setVisibility(View.VISIBLE);
-            titleView.setVisibility(View.VISIBLE);
-            bylineView.setVisibility(View.VISIBLE);
-            bodyView.setVisibility(View.VISIBLE);
-            progressBarView.setVisibility(View.INVISIBLE);
+
+            hideProgressBar(titleView, bylineView, bodyView);
         } else {
-            mPhotoView.setVisibility(View.INVISIBLE);
-            titleView.setVisibility(View.INVISIBLE);
-            bylineView.setVisibility(View.INVISIBLE);
-            bodyView.setVisibility(View.INVISIBLE);
+            showProgressBar(titleView, bylineView, bodyView);
         }
+    }
+
+    private void showProgressBar(TextView titleView, TextView bylineView, TextView bodyView) {
+        mPhotoView.setVisibility(View.INVISIBLE);
+        titleView.setVisibility(View.INVISIBLE);
+        bylineView.setVisibility(View.INVISIBLE);
+        bodyView.setVisibility(View.INVISIBLE);
+    }
+
+    private void hideProgressBar(TextView titleView, TextView bylineView, TextView bodyView) {
+        mPhotoView.setVisibility(View.VISIBLE);
+        titleView.setVisibility(View.VISIBLE);
+        bylineView.setVisibility(View.VISIBLE);
+        bodyView.setVisibility(View.VISIBLE);
+        progressBarView.setVisibility(View.INVISIBLE);
     }
 
     @Override
