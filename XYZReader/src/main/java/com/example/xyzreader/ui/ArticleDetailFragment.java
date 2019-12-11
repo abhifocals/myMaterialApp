@@ -27,6 +27,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.VolleyError;
@@ -53,6 +54,7 @@ public class ArticleDetailFragment extends Fragment implements
     private ObservableScrollView mScrollView;
     private DrawInsetsFrameLayout mDrawInsetsFrameLayout;
     private ColorDrawable mStatusBarColorDrawable;
+    private ProgressBar progressBarView;
 
     private int mTopInset;
     private View mPhotoContainerView;
@@ -150,6 +152,7 @@ public class ArticleDetailFragment extends Fragment implements
             }
         });
 
+        progressBarView = mRootView.findViewById(R.id.progressBar);
         bindViews();
         updateStatusBar();
         return mRootView;
@@ -210,7 +213,6 @@ public class ArticleDetailFragment extends Fragment implements
 
         if (mCursor != null) {
             mRootView.setAlpha(0);
-            mRootView.setVisibility(View.VISIBLE);
             mRootView.animate().alpha(1);
             titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             Date publishedDate = parsePublishedDate();
@@ -259,11 +261,16 @@ public class ArticleDetailFragment extends Fragment implements
 
                         }
                     });
+            mPhotoView.setVisibility(View.VISIBLE);
+            titleView.setVisibility(View.VISIBLE);
+            bylineView.setVisibility(View.VISIBLE);
+            bodyView.setVisibility(View.VISIBLE);
+            progressBarView.setVisibility(View.INVISIBLE);
         } else {
-            mRootView.setVisibility(View.GONE);
-            titleView.setText("N/A");
-            bylineView.setText("N/A" );
-            bodyView.setText("N/A");
+            mPhotoView.setVisibility(View.INVISIBLE);
+            titleView.setVisibility(View.INVISIBLE);
+            bylineView.setVisibility(View.INVISIBLE);
+            bodyView.setVisibility(View.INVISIBLE);
         }
     }
 
