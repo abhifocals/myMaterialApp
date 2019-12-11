@@ -153,7 +153,6 @@ public class ArticleDetailFragment extends Fragment implements
         });
 
         progressBarView = mRootView.findViewById(R.id.progressBar);
-        bindViews();
         updateStatusBar();
         return mRootView;
     }
