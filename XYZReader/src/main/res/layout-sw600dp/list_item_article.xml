@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
     android:paddingLeft="10dp"
-    android:paddingRight="10dp">
+    android:paddingRight="40dp">
 
     <com.example.xyzreader.ui.DynamicHeightNetworkImageView
         android:id="@+id/thumbnail"
